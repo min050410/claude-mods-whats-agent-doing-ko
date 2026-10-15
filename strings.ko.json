@@ -1,0 +1,377 @@
+{
+  "plugin": "whats-agent-doing@min050410",
+  "version": "0.4.3-ko.1",
+  "basedOn": "tzafrir/whats-agent-doing 1efd306 (0.4.3)",
+  "note": "참고용 목록입니다. 플러그인은 이 파일을 읽지 않습니다 — 문구를 바꾸려면 file:line 의 코드를 고치세요. {변수} 자리는 실행 중에 채워집니다.",
+  "strings": {
+    "idle": [
+      {
+        "key": "idle",
+        "ko": "대기 중",
+        "en": "Idle, waiting for your prompt",
+        "file": "hooks/register.tsx",
+        "line": 16
+      },
+      {
+        "key": "idle.lastTurn",
+        "ko": "대기 중 (지난 턴 {lastTurn})",
+        "en": "Idle · last turn {lastTurn}",
+        "file": "hooks/register.tsx",
+        "line": 619,
+        "vars": {
+          "lastTurn": "직전 턴의 끝 문구 (turnEnd.* 중 하나)"
+        }
+      }
+    ],
+    "model": [
+      {
+        "key": "model.readingPrompt",
+        "ko": "메시지 읽는 중",
+        "en": "Reading your prompt",
+        "file": "hooks/register.tsx",
+        "line": 578
+      },
+      {
+        "key": "model.readingPrompt.fallback",
+        "ko": "메시지 읽는 중",
+        "en": "Reading your prompt",
+        "file": "hooks/register.tsx",
+        "line": 886
+      },
+      {
+        "key": "model.reviewingResults",
+        "ko": "결과 {count}개 확인 중",
+        "en": "Reviewing the results of {count} actions",
+        "file": "hooks/register.tsx",
+        "line": 580,
+        "vars": {
+          "count": "살펴볼 도구 결과 수"
+        }
+      },
+      {
+        "key": "model.waiting",
+        "ko": "응답 대기 중",
+        "en": "Waiting for the model",
+        "file": "hooks/register.tsx",
+        "line": 581
+      },
+      {
+        "key": "model.thinking",
+        "ko": "생각 중 \"{snippet}\"",
+        "en": "Thinking: {snippet}",
+        "file": "hooks/register.tsx",
+        "line": 588,
+        "vars": {
+          "snippet": "지금 생각하는 문장 끝부분 (Claude 가 쓴 원문)"
+        }
+      },
+      {
+        "key": "model.writingReply",
+        "ko": "답변 작성 중 ({words}단어)",
+        "en": "Writing the reply · {words} words",
+        "file": "hooks/register.tsx",
+        "line": 595,
+        "vars": {
+          "words": "지금까지 쓴 단어 수"
+        }
+      }
+    ],
+    "tool": [
+      {
+        "key": "tool.bash",
+        "ko": "{command} 실행 중",
+        "en": "Running {command}",
+        "file": "hooks/activity-of.ts",
+        "line": 25,
+        "vars": {
+          "command": "명령 원문 (설명이 있으면 설명이 대신 나옴)"
+        }
+      },
+      {
+        "key": "tool.read",
+        "ko": "{file} 읽는 중",
+        "en": "Reading {file}",
+        "file": "hooks/activity-of.ts",
+        "line": 27
+      },
+      {
+        "key": "tool.edit",
+        "ko": "{file} 수정 중",
+        "en": "Editing {file}",
+        "file": "hooks/activity-of.ts",
+        "line": 29
+      },
+      {
+        "key": "tool.write",
+        "ko": "{file} 작성 중",
+        "en": "Writing {file}",
+        "file": "hooks/activity-of.ts",
+        "line": 31
+      },
+      {
+        "key": "tool.notebookEdit",
+        "ko": "{file} 수정 중",
+        "en": "Editing {file}",
+        "file": "hooks/activity-of.ts",
+        "line": 33
+      },
+      {
+        "key": "tool.grep",
+        "ko": "\"{pattern}\" 검색 중",
+        "en": "Searching for \"{pattern}\"",
+        "file": "hooks/activity-of.ts",
+        "line": 35
+      },
+      {
+        "key": "tool.glob",
+        "ko": "{pattern} 파일 찾는 중",
+        "en": "Finding files {pattern}",
+        "file": "hooks/activity-of.ts",
+        "line": 37
+      },
+      {
+        "key": "tool.webFetch",
+        "ko": "{host} 접속 중",
+        "en": "Fetching {host}",
+        "file": "hooks/activity-of.ts",
+        "line": 39
+      },
+      {
+        "key": "tool.webSearch",
+        "ko": "\"{query}\" 웹 검색 중",
+        "en": "Searching the web for \"{query}\"",
+        "file": "hooks/activity-of.ts",
+        "line": 41
+      },
+      {
+        "key": "tool.agent",
+        "ko": "{description} 에이전트 실행 중",
+        "en": "Running an agent: {description}",
+        "file": "hooks/activity-of.ts",
+        "line": 44
+      },
+      {
+        "key": "tool.todoWrite",
+        "ko": "할 일 정리 중",
+        "en": "Updating the todo list",
+        "file": "hooks/activity-of.ts",
+        "line": 46
+      },
+      {
+        "key": "tool.askUser",
+        "ko": "선택 기다리는 중",
+        "en": "Waiting for your answer",
+        "file": "hooks/activity-of.ts",
+        "line": 48
+      },
+      {
+        "key": "tool.skill",
+        "ko": "{skill} 스킬 사용 중",
+        "en": "Using the {skill} skill",
+        "file": "hooks/activity-of.ts",
+        "line": 50
+      },
+      {
+        "key": "tool.mcp",
+        "ko": "{server}/{name} 호출 중",
+        "en": "Using {server}: {name}",
+        "file": "hooks/activity-of.ts",
+        "line": 56
+      },
+      {
+        "key": "tool.other",
+        "ko": "{tool} 사용 중",
+        "en": "Using {tool}",
+        "file": "hooks/activity-of.ts",
+        "line": 59
+      }
+    ],
+    "approval": [
+      {
+        "key": "approval.agent",
+        "ko": "승인 대기: {label}",
+        "en": "Waiting for your approval: {label}",
+        "file": "hooks/register.tsx",
+        "line": 290
+      },
+      {
+        "key": "approval.main",
+        "ko": "승인 대기: {label}{more}",
+        "en": "Waiting for your approval: {label}{more}",
+        "file": "hooks/register.tsx",
+        "line": 540
+      },
+      {
+        "key": "approval.more",
+        "ko": " 외 {count}건",
+        "en": " (+{count} more)",
+        "file": "hooks/register.tsx",
+        "line": 535,
+        "vars": {
+          "count": "같이 기다리는 승인 요청 수 - 1"
+        }
+      }
+    ],
+    "agent": [
+      {
+        "key": "agent.defaultName",
+        "ko": "에이전트",
+        "en": "Agent",
+        "file": "hooks/register.tsx",
+        "line": 324
+      },
+      {
+        "key": "agent.defaultName.adopted",
+        "ko": "에이전트",
+        "en": "Agent",
+        "file": "hooks/register.tsx",
+        "line": 661
+      },
+      {
+        "key": "agent.starting",
+        "ko": "준비 중",
+        "en": "Getting started",
+        "file": "hooks/register.tsx",
+        "line": 329
+      },
+      {
+        "key": "agent.starting.adopted",
+        "ko": "준비 중",
+        "en": "Getting started",
+        "file": "hooks/register.tsx",
+        "line": 662
+      },
+      {
+        "key": "agent.working",
+        "ko": "에이전트 {count}개 실행 중",
+        "en": "{count} agents working",
+        "file": "hooks/register.tsx",
+        "line": 566
+      },
+      {
+        "key": "agent.moreAgents",
+        "ko": "… 외 {count}개",
+        "en": "… {count} more agents",
+        "file": "hooks/register.tsx",
+        "line": 441
+      },
+      {
+        "key": "agent.historyRow",
+        "ko": "{name} 에이전트",
+        "en": "Agent: {name}",
+        "file": "hooks/register.tsx",
+        "line": 696
+      }
+    ],
+    "compact": [
+      {
+        "key": "compact.running",
+        "ko": "대화 압축 중",
+        "en": "Compacting the conversation",
+        "file": "hooks/register.tsx",
+        "line": 528
+      },
+      {
+        "key": "compact.done",
+        "ko": "대화 압축 완료",
+        "en": "Compacted the conversation",
+        "file": "hooks/register.tsx",
+        "line": 359
+      }
+    ],
+    "turnEnd": [
+      {
+        "key": "turnEnd.ok",
+        "ko": "완료, {took}, 도구 {count}번",
+        "en": "done in {took}, {count} actions",
+        "file": "hooks/register.tsx",
+        "line": 386
+      },
+      {
+        "key": "turnEnd.interrupted",
+        "ko": "{took} 만에 중단됨",
+        "en": "interrupted after {took}",
+        "file": "hooks/register.tsx",
+        "line": 381
+      },
+      {
+        "key": "turnEnd.error",
+        "ko": "{took} 만에 오류로 멈춤",
+        "en": "stopped on an error after {took}",
+        "file": "hooks/register.tsx",
+        "line": 383
+      },
+      {
+        "key": "turnEnd.refusal",
+        "ko": "요청 거절",
+        "en": "declined the request",
+        "file": "hooks/register.tsx",
+        "line": 385
+      }
+    ],
+    "history": [
+      {
+        "key": "history.thought",
+        "ko": "생각 ({words}단어)",
+        "en": "Thought ({words} words)",
+        "file": "hooks/register.tsx",
+        "line": 796
+      },
+      {
+        "key": "history.thought.empty",
+        "ko": "생각",
+        "en": "Thought",
+        "file": "hooks/register.tsx",
+        "line": 796
+      },
+      {
+        "key": "history.reply",
+        "ko": "답변 ({words}단어)",
+        "en": "Wrote the reply ({words} words)",
+        "file": "hooks/register.tsx",
+        "line": 805
+      },
+      {
+        "key": "history.earlier",
+        "ko": "… 이전 {count}개",
+        "en": "… {count} earlier",
+        "file": "hooks/register.tsx",
+        "line": 477
+      }
+    ],
+    "duration": [
+      {
+        "key": "duration.underTen",
+        "ko": "{seconds}초",
+        "en": "{seconds}s",
+        "file": "hooks/text.ts",
+        "line": 59,
+        "example": "4.2초"
+      },
+      {
+        "key": "duration.underMinute",
+        "ko": "{seconds}초",
+        "en": "{seconds}s",
+        "file": "hooks/text.ts",
+        "line": 63,
+        "example": "42초"
+      },
+      {
+        "key": "duration.minutes",
+        "ko": "{minutes}분 {seconds}초",
+        "en": "{minutes}m {seconds}s",
+        "file": "hooks/text.ts",
+        "line": 69,
+        "example": "3분 5초",
+        "todo": "ko 에서는 초 자리 0 패딩(padStart) 빼기"
+      }
+    ]
+  },
+  "untranslated": [
+    {
+      "text": "Claude: ",
+      "file": "hooks/register.tsx",
+      "reason": "상자 앞 이름표, 그대로 둠"
+    }
+  ]
+}
