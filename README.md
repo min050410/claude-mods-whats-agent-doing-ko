@@ -1,10 +1,11 @@
 <div align="center">
 
-# What's Agent Doing · 한국어판
+# What's Agent Doing
 
 **Claude가 지금 뭘 하고 있는지, 프롬프트 바로 위에서 한국어로.**
 
 [![Claude Code mod](https://img.shields.io/badge/Claude%20Code-mod-D97757?style=flat-square)](https://github.com/topics/claude-code-mods)
+
 [![version](https://img.shields.io/badge/version-0.4.3--ko.1-555?style=flat-square)](.claude-plugin/plugin.json)
 [![license](https://img.shields.io/badge/license-MIT-3DA639?style=flat-square)](LICENSE)
 [![network](https://img.shields.io/badge/network-none-3DA639?style=flat-square)](#안전한가요)
@@ -12,12 +13,8 @@
 
 </div>
 
-```
-╭──────────────────────────────────────────────────────────────╮
-│ ▸ ● Claude: 쿠폰 금액이 깨진 커밋 찾기 | 1분 48초            │
-╰──────────────────────────────────────────────────────────────╯
-❯ _
-```
+<img width="602" height="74" alt="image" src="https://github.com/user-attachments/assets/f23722df-92b0-4d78-97b3-ee0b75feb058" />
+
 
 긴 작업을 맡기면 Claude는 몇 분씩 bisect를 돌리고, 일회용 스크립트를 짜고, 플래그가 줄줄이 붙은 명령을 실행합니다. 그동안 화면에는 스피너와 지나가는 명령뿐이라 **지금 뭘 하려는 건지, 저 명령은 왜 돌리는 건지, 멈춘 건지 느린 건지** 알기 어렵습니다.
 
